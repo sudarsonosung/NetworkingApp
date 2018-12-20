@@ -46,7 +46,9 @@ class PostPage extends Component {
   };
   render() {
     return (
-      <View>
+      <View style={{ flex: 1, justifyContent: "center" }}>
+        {this.state.isLoading && <ActivityIndicator size="large" />}
+        <Text>{this.state.statusMessage}</Text>
         <TextInput
           placeholder="Title"
           onChangeText={txt => this.setState({ title: txt })}
@@ -55,11 +57,11 @@ class PostPage extends Component {
         <TextInput
           placeholder="Description"
           onChangeText={txt => this.setState({ description: txt })}
-          style={{ width: "90%", backgroundColor: "yellow" }}
+          style={{ width: "90%", backgroundColor: "yellow", marginTop: 5 }}
         />
         <Text>Post Page</Text>
         <TouchableOpacity onPress={() => this.postNote()}>
-          <Text style={{ margin: 10, backgroundColor: "red" }}>
+          <Text style={{ margin: 10, backgroundColor: "green" }}>
             Post My Note
           </Text>
         </TouchableOpacity>

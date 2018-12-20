@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 
 class DeletePage extends Component {
+deleteNote = () => {
+
+}
+
   render() {
     return (
       <View>
